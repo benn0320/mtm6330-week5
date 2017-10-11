@@ -18,6 +18,7 @@ gulp.task('sass', function () {
   return gulp
     .src(sassPath)          // where to find the Sass source files (use our variable)
     .pipe(sass())           // forward those files to the compiler
+    .pipe(gulp.dest('./css/')) //
     .pipe(postcss(plugins)) // apply the PostCSS plugins
     .pipe(gulp.dest('./css/min')) // where to output the comipled CSS files
 })
